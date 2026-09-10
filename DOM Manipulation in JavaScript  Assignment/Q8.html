@@ -1,0 +1,28 @@
+<!-- 8. Modify Element Style 
+Create a heading and use the style property to change its color, fontSize, and backgroundColor. 
+Example: 
+HTML: <h1 id="heading">JavaScript</h1> 
+Expected Result: The heading should display with the new styles applied through JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style{
+            color: aqua;
+            font-size: larger;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">JavaScript</h1>
+    <script>
+        const h1 = document.querySelector("#heading");
+        h1.classList.add("style");
+    </script>
+</body>
+</html>

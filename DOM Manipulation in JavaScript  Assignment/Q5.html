@@ -1,0 +1,27 @@
+<!-- 5. Add HTML Using innerHTML 
+Create a <div> with an id of container and use innerHTML to add a heading and a paragraph inside it. 
+Example: 
+Expected HTML inside the container: 
+<h2>My Website</h2> 
+<p>Welcome to my website!</p>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script>
+        const contain = document.querySelector("#container");
+        contain.innerHTML =
+            `<h2>My Website</h2>
+            <p>welcome to my website</p>`
+    </script>
+</body>
+
+</html>

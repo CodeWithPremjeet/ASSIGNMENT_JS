@@ -1,0 +1,22 @@
+<!-- 7. Add and Remove Classes Using classList 
+Create a button and use classList.add() to add a class to it. Then use classList.remove() to remove the 
+class. 
+Example: 
+HTML: <button id="btn">Click Me</button> 
+Expected Result: The button should have the class added and then removed using JavaScript.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" class="hello">Click Me</button>
+    <script>
+        const btn = document.querySelector("#btn");
+        btn.classList.remove("hello");
+    </script>
+</body>
+</html>

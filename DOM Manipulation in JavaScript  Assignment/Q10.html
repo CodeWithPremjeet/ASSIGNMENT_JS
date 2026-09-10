@@ -1,0 +1,21 @@
+<!-- 10. Create an Element Using createElement() 
+Create a new <p> element using createElement(), add some text to it using textContent, and display it 
+on the webpage. 
+Example: 
+Expected Output: This paragraph was created using JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let paragraph = document.createElement("p");
+        paragraph.textContent = "This paragragh was created using JavaScript";
+        document.body.append(paragraph);
+    </script>
+</body>
+</html>

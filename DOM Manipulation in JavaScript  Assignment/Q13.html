@@ -1,0 +1,28 @@
+<!-- 13. Insert an Element Using insertBefore() 
+Create a list containing three items and use insertBefore() to insert a new item before the second item. 
+Example: 
+Before: HTML, JavaScript, React 
+After: HTML, CSS, JavaScript, React -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="skills">
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>React</li>
+    </ul>
+    <script>
+        const ul = document.querySelector("#skills");
+        const li = document.createElement("li");
+        li.textContent = "CSS";
+        const items = ul.children;
+        ul.insertBefore(li,items[1]);
+    </script>
+</body>
+</html>

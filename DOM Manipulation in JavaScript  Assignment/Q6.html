@@ -1,0 +1,22 @@
+<!-- 6. Change an Attribute Using setAttribute() 
+Create an image element and use setAttribute() to change its src and alt attributes. 
+Example: 
+HTML: <img id="profileImage" src="old.jpg" alt="Old Image"> 
+Expected Result: The image should have the new src and alt values. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="profileImage" src="old.jpg" alt="Old Image">
+    <script>
+        const img = document.querySelector("#profileImage");
+        img.setAttribute("src", "New.jpg");
+        img.setAttribute("alt", "New Img");
+    </script>
+</body>
+</html>

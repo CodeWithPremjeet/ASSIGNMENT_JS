@@ -1,0 +1,21 @@
+<!-- 1. Select an Element by ID 
+ Create a heading with an id of title and use getElementById() to select it and change its text. 
+ Example: 
+ HTML: <h1 id="title">Welcome</h1> 
+ Output: Hello JavaScript  -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1 id="title">Welcome</h1>
+    <script>
+        const h1 = document.getElementById("title");
+        h1.textContent = "Hello JavaScript";
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,24 @@
+<!-- 
+2. Select an Element Using querySelector() 
+Create a paragraph with a class description and use querySelector() to select it and change its text 
+content. 
+Example: 
+HTML: <p class="description">Old Text</p> 
+Output: New Description
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="description">Old Text</p>
+    <script>
+        const paragraph = document.querySelector(".description");
+        paragraph.textContent = "New Description";
+    </script>
+</body>
+</html>

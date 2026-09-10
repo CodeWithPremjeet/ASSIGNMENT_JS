@@ -1,0 +1,29 @@
+<!-- 11. Add an Element Using appendChild() 
+Create a <ul> in HTML. Use JavaScript to create a new <li> element and add it to the list using 
+appendChild(). 
+Example: 
+HTML: <ul id="skills"></ul> 
+Expected Output: HTML, CSS, JavaScript  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="skills"></ul>
+    <script>
+        const ul = document.querySelector("#skills");
+        let li1 = document.createElement("li");
+        let li2 = document.createElement("li");
+        let li3 = document.createElement("li");
+        li1.textContent = "HTML";
+        li2.textContent = "CSS";
+        li3.textContent = "JavaScript";
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+    </script>
+</body>
+</html>

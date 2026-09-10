@@ -1,0 +1,23 @@
+<!-- 15. Clone an Element Using cloneNode() 
+Create a button and use cloneNode() to create a copy of the button. Add the cloned button to the 
+webpage. 
+Example: 
+HTML: <button id="btn">Click Me</button> 
+Expected Result: [Click Me] [Click Me]  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me</button> 
+    <script>
+        const btn = document.querySelector("#btn");
+        const clone = btn.cloneNode(true);
+        document.body.append(clone);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 3. Select Multiple Elements Using querySelectorAll() 
+Create three <li> elements with the class item. Use querySelectorAll() to select all of them and change 
+their text color using the style property. 
+Example: 
+HTML: <li class="item">HTML</li> 
+<li class="item">CSS</li> 
+<li class="item">JavaScript</li> 
+Expected Result: All three list items should have the changed text color.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <li class="item">HTML</li>
+    <li class="item">CSS</li>
+    <li class="item">JavaScript</li>
+    <script>
+        const item = document.querySelectorAll(".item");
+        item.forEach((input) => {
+            input.classList.add("color");
+        })
+    </script>
+</body>
+
+</html>

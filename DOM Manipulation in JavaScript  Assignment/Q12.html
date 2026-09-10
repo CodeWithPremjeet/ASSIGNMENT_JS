@@ -1,0 +1,29 @@
+<!-- 12. Add Elements Using append() and prepend() 
+Create a list and use append() to add an item at the end and prepend() to add an item at the beginning. 
+Example: 
+Before: CSS, JavaScript 
+After: HTML, CSS, JavaScript, React -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="skills">
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        const ul = document.querySelector("#skills");
+        const li1 = document.createElement("li");
+        const li2 = document.createElement("li");
+        li1.textContent = "HTML";
+        li2.textContent = "React";
+        ul.prepend(li1);
+        ul.append(li2);
+    </script>
+</body>
+</html>
