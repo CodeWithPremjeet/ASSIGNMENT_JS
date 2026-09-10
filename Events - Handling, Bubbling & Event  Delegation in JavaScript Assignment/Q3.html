@@ -1,0 +1,26 @@
+<!-- 3. Handle a Mouseover Event 
+Create a heading and use addEventListener() with the mouseover event to change its text when the 
+mouse moves over it.
+Example: 
+Before: 
+JavaScript 
+After mouseover: 
+Mouse is over the heading! -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="head">I am header</header>
+    <script>
+        const head = document.querySelector("#head");
+        head.addEventListener("mouseover", (e) => {
+            head.textContent = "I am after mouseover";
+        })
+    </script>
+</body>
+</html>

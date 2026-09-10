@@ -1,0 +1,26 @@
+<!-- 8. Run an Event Only Once 
+Create a button and use addEventListener() with the once option so that the event runs only the first 
+time the button is clicked. 
+Example: 
+First click: 
+Welcome! 
+Second click: 
+No message should be displayed.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <script>
+        const btn = document.querySelector("#btn");
+        btn.addEventListener("click", (e) => {
+            console.log("welcome!");
+        },{once:true});
+    </script>
+</body>
+</html>

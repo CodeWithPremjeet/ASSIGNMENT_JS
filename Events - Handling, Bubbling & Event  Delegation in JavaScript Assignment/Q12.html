@@ -1,0 +1,35 @@
+<!-- 12. Handle Multiple Buttons Using Event Delegation 
+Create multiple buttons inside a parent <div>. Add only one event listener to the parent and use event 
+delegation to identify which button was clicked. 
+Example: 
+HTML: 
+<div id="buttons"> 
+<button>HTML</button> 
+<button>CSS</button> 
+<button>JavaScript</button> 
+</div>
+When JavaScript button is clicked: 
+JavaScript button clicked  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="buttons"> 
+        <button>CSS</button> 
+        <button>JavaScript</button> 
+        <button>HTML</button> 
+    </div>
+    <script>
+        const btn = document.querySelector("#buttons");
+        btn.addEventListener("click", (e) => {
+            if(e.target.tagName === "BUTTON"){
+                console.log(`${e.target.textContent} button clicked`);
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- 5. Display Mouse Coordinates 
+Create a <div> and use a mousemove event to display the mouse coordinates using the event object's 
+clientX and clientY properties. 
+Example Output: 
+X: 250 
+Y: 180 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #div{
+        width: 500px;
+        height: 300px;
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        const div = document.querySelector("#div");
+        div.addEventListener("mousemove", (e) => {
+            div.textContent = `Client X/Y = ${e.clientX}/${e.clientY}`
+        })
+    </script>
+</body>
+</html>

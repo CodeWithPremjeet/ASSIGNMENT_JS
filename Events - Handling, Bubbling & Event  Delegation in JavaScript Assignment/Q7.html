@@ -1,0 +1,35 @@
+<!-- 7. Remove an Event Listener 
+Create a button and attach a click event using addEventListener(). Create a separate function and use 
+removeEventListener() to stop the click event when required. 
+Example: 
+Before removing the listener: 
+Button clicked! 
+After removing the listener: 
+Clicking the button should no longer display the message.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Event Listener</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <button id="removeBtn">Remove Event</button>
+
+    <script>
+        const btn = document.querySelector("#btn");
+        const removeBtn = document.querySelector("#removeBtn");
+        function showMessage(){
+            console.log("Button clicked");
+        }
+        btn.addEventListener("click", showMessage)
+        removeBtn.addEventListener("click", () => {
+            btn.removeEventListener("click", showMessage);
+            
+            console.log("Event listener Removed");
+            })
+        
+    </script>
+</body>
+</html>

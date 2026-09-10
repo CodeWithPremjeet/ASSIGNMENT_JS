@@ -1,0 +1,33 @@
+<!-- 13. Handle a Dynamic List Using Event Delegation 
+Create a list of items and add one event listener to the <ul>. Use event delegation to display the text of 
+the clicked list item. 
+Example: 
+HTML: 
+<ul id="skills"> 
+<li>HTML</li> 
+<li>CSS</li> 
+<li>JavaScript</li> 
+</ul> 
+When CSS is clicked: 
+You clicked: CSS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="skills"> 
+        <li>HTML</li> 
+        <li>CSS</li> 
+        <li>JavaScript</li> 
+    </ul> 
+    <script>
+        const skills = document.querySelector("#skills");
+        skills.addEventListener("click", (e) => {
+            console.log(`You clicked: ${e.target.textContent}`);
+        })
+    </script>
+</body>
+</html>

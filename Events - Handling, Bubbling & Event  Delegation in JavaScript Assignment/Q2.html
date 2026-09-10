@@ -1,0 +1,28 @@
+<!-- 2. Change Text on Click 
+Create a paragraph and a button. Use addEventListener() to change the paragraph text when the button 
+is clicked. 
+Example: 
+Before: 
+Welcome to my website! 
+After clicking the button: 
+Thanks for visiting!  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Before Button clicked</p>
+    <button id="btn">Click Me</button>
+    <script>
+        const paragraph = document.querySelector("p");
+        const btn = document.querySelector("#btn");
+        btn.addEventListener("click", (e) => {
+            paragraph.textContent = "Button is clicked"
+        })
+    </script>
+</body>
+</html>

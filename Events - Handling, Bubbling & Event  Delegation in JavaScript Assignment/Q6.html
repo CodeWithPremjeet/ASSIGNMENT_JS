@@ -1,0 +1,30 @@
+<!-- 6. Get the Value of an Input Using the Event Object 
+Create an input field and use the event object's target.value to display the entered value. 
+Example: 
+Input: 
+JavaScript 
+Output: 
+You typed: JavaScript  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="input">
+        <button>Click</button>
+    </form>
+    <script>
+        const input = document.querySelector("#input");
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            console.log(input.value);
+        })
+    </script>
+</body>
+</html>

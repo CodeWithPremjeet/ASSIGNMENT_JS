@@ -1,0 +1,35 @@
+<!-- 9. Stop Event Propagation 
+Create a parent <div> containing a button. Add click events to both parent and button. Use 
+stopPropagation() so that clicking the button does not trigger the parent's click event. 
+Example: 
+Without stopPropagation(): 
+Button clicked 
+Parent clicked 
+With stopPropagation(): 
+Button clicked -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent" style="width: 500px; height: 500px; border: 1px solid black;">
+        <button id="btn">Hello</button>
+    </div>
+    <script>
+        const parent = document.querySelector("#parent");
+        const btn = document.querySelector("#btn");
+
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            console.log("Button Clicked");
+        })
+        parent.addEventListener("click", (e) => {
+            e.stopPropagation();
+            console.log("Parent Clicked");
+        })
+    </script>
+</body>
+</html>

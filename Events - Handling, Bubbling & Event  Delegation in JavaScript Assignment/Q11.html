@@ -1,0 +1,31 @@
+<!-- 11. Demonstrate Event Capturing 
+Create a parent <div> containing a button. Add click event listeners to both using the capturing phase 
+and observe the order in which the events execute. 
+Example: 
+Expected Output: 
+Parent clicked 
+Button clicked -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="child">Click Me</button>
+    </div>
+    <script>
+         const parent = document.querySelector("#parent");
+        const child = document.querySelector("#child");
+
+        parent.addEventListener("click", (e) => {
+            console.log("Parent Clicked");
+        },true)
+        child.addEventListener("click", (e) => {
+            console.log("Button Clicked");
+        },{ capture: true })
+    </script>
+</body>
+</html>
