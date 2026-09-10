@@ -1,0 +1,25 @@
+<!-- 2. Prevent Form Submission 
+Create a form with a submit button and use preventDefault() inside the submit event to stop the page 
+from refreshing. 
+Example: 
+Expected Result: 
+When the user clicks Submit, the form should not reload the page. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <button>Click Me</button>
+    </form>
+    <script>
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>

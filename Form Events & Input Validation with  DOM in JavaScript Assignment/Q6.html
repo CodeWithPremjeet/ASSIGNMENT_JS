@@ -1,0 +1,30 @@
+<!-- 6. Handle the blur Event 
+Create an input field and use the blur event to display a message when the user moves away from the 
+input field. 
+Example: 
+After leaving the input: 
+You left the input field.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style{
+            border: 5px solid blueviolet;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="style" id="style">
+    <script>
+        const input = document.querySelector("#style");
+        input.addEventListener("blur", (e) => {
+            input.classList.remove("style");
+        })
+    </script>
+</body>
+</html>

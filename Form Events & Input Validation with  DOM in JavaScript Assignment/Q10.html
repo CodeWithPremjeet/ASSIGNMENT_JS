@@ -1,0 +1,89 @@
+<!-- 10. Validate Multiple Form Fields 
+Create a form containing name, email, and password fields. On submission, check whether any of the 
+fields are empty and display an appropriate error message. 
+Example:
+Input: 
+Name: Rahul 
+Email: 
+Password: 123456 
+Output: 
+Email is required.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <span></span>
+    </div>
+    <br>
+    <div>
+        <label for="name">Email:</label>
+        <input type="text" name="name" id="email" placeholder="Enter your email">
+        <span></span>
+    </div>
+    <br>
+    <div>
+        <label for="name">Password:</label>
+        <input type="password" name="name" id="password" placeholder="Enter your password">
+        <span></span>
+    </div>
+    <button>Submit</button>
+    </form>
+    <script>
+        const form = document.querySelector("form");
+        const Username = document.querySelector("#name");
+        const email = document.querySelector("#email");
+        const password = document.querySelector("#password");
+        function showerror(input, errorMessage){
+            input.parentElement.querySelector("span").textContent = errorMessage;
+        }
+        function removeError(input){
+            input.parentElement.querySelector("span").textContent = "";
+        }
+        function validName(input){
+            if(input.value.length == 0){
+                showerror(input, "Name is required");
+                return false;
+            }else{
+                removeError(input);
+                return true;
+            }
+        }
+        function validEmail(input){
+            if(input.value.length == 0){
+                showerror(input, "Email is required");
+                return false;
+            }else{
+                removeError(input);
+                return true;
+            }
+        }
+        function validPass(input){
+           if(input.value.length == 0){
+                showerror(input, "Password is required");
+                return false;
+            }else{
+                removeError(input);
+                return true;
+            } 
+        }
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const isValidName = validName(Username);
+            const isValidEmail = validEmail(email);
+            const isValidPass = validPass(password);
+            if(isValidName && isValidEmail && isValidPass){
+                console.log("form is submitted successfully");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 7. Validate a Required Name Field 
+Create a form with a name input. When the form is submitted, check whether the name field is empty. 
+Display an error message if it is empty. 
+Example: 
+Input: 
+Name: 
+Output: 
+Name is required -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <button>submit</button>
+    </form>
+    <script>
+        const form = document.querySelector("form");
+        const input = document.querySelector("#name");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault()
+            if(input.value.length == 0){
+                let span = document.createElement("span");
+                span.textContent = "Name is requried";
+                form.append(span);
+            }
+        })
+    </script>
+</body>
+</html>

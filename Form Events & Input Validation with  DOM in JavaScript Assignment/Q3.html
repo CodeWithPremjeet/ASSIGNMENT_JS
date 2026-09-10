@@ -1,0 +1,28 @@
+<!-- 3. Display Input Using the input Event 
+Create an input field and use the input event to display the value entered by the user in a paragraph. 
+Example: 
+Input: JavaScript 
+Output: You entered: JavaScript  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" class="inp">
+        <button class="btn">Submit</button>
+    </form>
+    <script>
+        const form = document.querySelector("form");
+        const input  = document.querySelector(".inp");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault()
+            console.log(`You entered: ${input.value}`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- 8. Validate Email Field 
+Create a form with an email input and check whether the email field is empty during form submission. 
+Display an appropriate message if no email is entered. 
+Example: 
+Input: 
+Email: 
+Output: 
+Email is required. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Email:</label>
+        <input type="text" id="name">
+        <button>submit</button>
+    </form>
+    <script>
+        const form = document.querySelector("form");
+        const input = document.querySelector("#name");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault()
+            if(input.value.length == 0){
+                let span = document.createElement("span");
+                span.textContent = "Email is requried";
+                form.append(span);
+            }
+        })
+    </script>
+</body>
+</html>

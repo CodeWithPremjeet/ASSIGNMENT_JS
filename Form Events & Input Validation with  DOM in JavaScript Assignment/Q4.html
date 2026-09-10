@@ -1,0 +1,35 @@
+<!-- 4. Detect Changes Using the change Event 
+Create a <select> dropdown containing three programming languages. Use the change event to display 
+the selected language. 
+Example: 
+Options: 
+HTML 
+CSS 
+JavaScript 
+When JavaScript is selected: 
+Selected Language: JavaScript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <select name="lang" id="lang">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+        <button class="btn">Submit</button>
+    </form>
+    <script>
+        const select = document.querySelector("#lang");
+        select.addEventListener("change", (e) => {
+            e.preventDefault()
+            console.log(`Selected Language ${select.value}`);
+        })
+    </script>
+</body>
+</html>

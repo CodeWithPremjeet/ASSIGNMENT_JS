@@ -1,0 +1,31 @@
+<!-- 5. Handle the focus Event 
+Create an input field and use the focus event to change its border or background color when the user 
+clicks inside it. 
+Example: 
+Before Focus: 
+Normal input style 
+After Focus: 
+Input border changes.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .focus{
+            border: 5px solid blueviolet;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="focus">
+    <script>
+        const input = document.querySelector("#focus");
+        input.addEventListener("focus", (e) => {
+            input.classList.add("focus");
+        })
+    </script>
+</body>
+</html>
